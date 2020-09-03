@@ -180,6 +180,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\Athuoriztionopreationfilter.cs" />
+    <Compile Include="App_Start\AuthenticationTokenOperation.cs" />
+    <Compile Include="App_Start\Authtokenopration.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
