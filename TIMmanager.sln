@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIMDatamanager", "TIM\TIMDa
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TIMData", "TIMData\TIMData.sqlproj", "{D560F896-BB94-4D61-B55D-6546F8DDC804}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TIMDESKTOPUSERINTERFACE", "TIMDESKTOPUSERINTERFACE\TIMDESKTOPUSERINTERFACE.csproj", "{3783469A-EFC6-42CE-8BAC-95106C4A9A0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{D560F896-BB94-4D61-B55D-6546F8DDC804}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D560F896-BB94-4D61-B55D-6546F8DDC804}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D560F896-BB94-4D61-B55D-6546F8DDC804}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3783469A-EFC6-42CE-8BAC-95106C4A9A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3783469A-EFC6-42CE-8BAC-95106C4A9A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3783469A-EFC6-42CE-8BAC-95106C4A9A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3783469A-EFC6-42CE-8BAC-95106C4A9A0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
