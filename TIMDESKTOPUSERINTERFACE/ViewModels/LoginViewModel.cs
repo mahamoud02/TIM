@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TIMDESKTOPUSERINTERFACE.Helper;
 
 namespace TIMDESKTOPUSERINTERFACE.ViewModels
 {
@@ -11,6 +12,11 @@ namespace TIMDESKTOPUSERINTERFACE.ViewModels
     {
         private string _username;
         private string _password;
+        private IAPIHalper _apihalper;
+        public LoginViewModel ( IAPIHalper  apihalper)
+        {
+            _apihalper = apihalper;
+        }
 
         public string UserName
         {
@@ -50,9 +56,17 @@ namespace TIMDESKTOPUSERINTERFACE.ViewModels
                 return output;
             }
         }
-        public void LogIn()
+        public async Task LogIn()
         {
-            Console.WriteLine();
+            try
+            {
+                var result = await _apihalper.Authenticate(UserName, Password);
+            }
+            catch (Exception ex )
+            {
+
+                Console.WriteLine(ex.Message);
+            }
         }
 
     }

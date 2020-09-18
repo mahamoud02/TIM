@@ -26,8 +26,9 @@ namespace TIMDESKTOPUSERINTERFACE
         protected override void Configure()
         {
             _container.Instance(_container);
-            _container.Singleton<IWindowManager, WindowManager>().
-                Singleton<IEventAggregator, EventAggregator>();
+            _container.Singleton<IWindowManager, WindowManager>()
+             .  Singleton<IEventAggregator, EventAggregator>()
+              . Singleton<IAPIHalper,APIHalper>();
             GetType().Assembly.GetTypes()
                 .Where(type => type.IsClass)
                 .Where(type => type.Name.EndsWith("ViewModel"))
