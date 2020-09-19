@@ -11,6 +11,7 @@
                     <local:Boostrapper x:Key="Boostrapper"/>
                 </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></BooleanToVisibilityConverter>
     </ResourceDictionary>
         
     </Application.Resources>

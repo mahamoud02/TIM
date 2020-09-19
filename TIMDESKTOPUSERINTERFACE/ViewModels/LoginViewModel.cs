@@ -41,6 +41,41 @@ namespace TIMDESKTOPUSERINTERFACE.ViewModels
 
             }
         }
+      
+            public bool IsErrorVisible
+        {
+            get 
+
+            {
+                bool output=false;
+
+                if(ErrorMessge?.Length > 0)
+                {
+                    output = true;
+                }
+                return  output; 
+            }
+            set { }
+            
+        }
+
+
+        private string _errorMessage;
+
+        public string ErrorMessge
+        {
+            get { return _errorMessage; }
+
+            set
+            {
+
+                _errorMessage = value;
+                NotifyOfPropertyChange(() => IsErrorVisible);
+                NotifyOfPropertyChange(() => ErrorMessge);
+
+
+            }
+        }
         public bool CanLogIn
         {
             get
@@ -58,14 +93,16 @@ namespace TIMDESKTOPUSERINTERFACE.ViewModels
         }
         public async Task LogIn()
         {
+            
             try
             {
+                ErrorMessge = "";
                 var result = await _apihalper.Authenticate(UserName, Password);
             }
             catch (Exception ex )
             {
 
-                Console.WriteLine(ex.Message);
+                ErrorMessge = ex.Message;
             }
         }
 
